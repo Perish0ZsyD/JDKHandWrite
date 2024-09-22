@@ -196,6 +196,11 @@ public class MinHeap<E> {
                     cmpIndex = rightChildIndex(index);
                 }
 
+                /**
+                *((Comparable) list.get(leftChildIndex(index)))显示转换将list.get(leftChildIndex(index))结果<list.get()返回Object类型不能直接调用compareTo>
+                *转换为Comparable类型，来调用compareTo方法
+                */
+
                 // 如果父节点比子节点小则停止比较，结束循环
                 if (((Comparable) list.get(index)).compareTo(list.get(cmpIndex)) <= 0) {
                     break;
@@ -228,7 +233,10 @@ public class MinHeap<E> {
 
         // 往堆中随机存放1000W个元素
         for (int i = 0; i < n; i++) {
-            heap.add(ThreadLocalRandom.current().nextInt(0, n));
+            heap.add(ThreadLocalRandom.current().nextInt(0, n)); // ThreadRandom java7中引入的一个类用来生成随机数，线程安全的（Random类不安全，T继承Random）
+            // current是该类的一个静态方法，返回线程ThreadLocalRandom实例（第一次调用则new一个）
+            // nextInt 生成一个随机数，接受两个参数，随机数范围为[a, b)
+
         }
 
         int [] arr = new int[n];
