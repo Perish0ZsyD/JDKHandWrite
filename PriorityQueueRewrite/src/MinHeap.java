@@ -82,21 +82,21 @@ public class MinHeap<E> {
             throw new IllegalArgumentException();
         }
 
-        return (childIndex - 1) / 2;
+        return (childIndex - 1) >> 1;
     }
 
     /**
      * 返回当前节点的左子节点
      */
     private int leftChildIndex(int index) {
-        return 2 * index + 1; // 索引从0开始
+        return (index  << 1) + 1; // 索引从0开始
     }
 
     /**
      * 返回当前节点的右子节点
      */
     private int rightChildIndex(int index) {
-        return 2 * index + 2;
+        return (index << 1) + 2;
     }
 
     /**
