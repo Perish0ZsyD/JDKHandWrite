@@ -1,11 +1,12 @@
+package PriorityQueueRewrite;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * MinHeap class
+ * PriorityQueueRewrite.MinHeap class
  *
  * @author Siyuan
  * @Date 2024/9/21 17:42

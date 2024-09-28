@@ -1,7 +1,9 @@
+package PriorityQueueRewrite;
+
 import java.util.Comparator;
 
 /**
- * class implements Queue
+ * class implements PriorityQueueRewrite.Queue
  *
  * @author Siyuan
  * @Date 2024/9/23 15:28

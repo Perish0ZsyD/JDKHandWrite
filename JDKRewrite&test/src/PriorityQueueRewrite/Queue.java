@@ -1,5 +1,7 @@
+package PriorityQueueRewrite;
+
 /**
- * Use for PriorityQueue
+ * Use for PriorityQueueRewrite.PriorityQueue
  *
  * @author Siyuan
  * @Date 2024/9/22 19:25
